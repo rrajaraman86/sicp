@@ -63,13 +63,84 @@
     )
 )
 
-; (deftest max-n-of-coll-test
-;   (testing "Test for max-n-of-coll function."
-;     (is (= [] (max-n '() 0))
-;     ; (is (= [] (max-n '(5) 0))
-;     ; (is (= [5] (max-n '(5) 1))
-;     ; (is (= [7] (max-n '(5 7) 1))
-;     ; (is (= [5 7] (max-n '(5 7) 2))
-;     )
-; )
+(deftest f-recursive-test
+  (testing "Test for f-recursive function."
+    (is (= -1 (f-recursive -1)))
+    (is (= 0 (f-recursive 0)))
+    (is (= 1 (f-recursive 1)))
+    (is (= 2 (f-recursive 2)))
+    (is (= 4 (f-recursive 3)))
+    (is (= 11 (f-recursive 4)))
+    )
+)
+
+(deftest f-iterative-test
+  (testing "Test for f-iterative-test function."
+    (is (= -1 (f-iterative -1)))
+    (is (= 0 (f-iterative 0)))
+    (is (= 1 (f-iterative 1)))
+    (is (= 2 (f-iterative 2)))
+    (is (= 4 (f-iterative 3)))
+    (is (= 11 (f-iterative 4)))
+    )
+)
+
+(deftest pascal-recursive-test
+  (testing "Test for pascal-recursive function."
+    (is (= 1 (pascal-recursive 1 1)))
+    (is (= 1 (pascal-recursive 2 1)))
+    (is (= 1 (pascal-recursive 2 2)))
+    (is (= 1 (pascal-recursive 3 1)))
+    (is (= 2 (pascal-recursive 3 2)))
+    (is (= 1 (pascal-recursive 3 3)))
+    (is (= 1 (pascal-recursive 4 1)))
+    (is (= 3 (pascal-recursive 4 2)))
+    (is (= 3 (pascal-recursive 4 3)))
+    (is (= 1 (pascal-recursive 4 4)))
+    (is (= 1 (pascal-recursive 5 1)))
+    (is (= 4 (pascal-recursive 5 2)))
+    (is (= 6 (pascal-recursive 5 3)))
+    (is (= 4 (pascal-recursive 5 4)))
+    (is (= 1 (pascal-recursive 5 5)))
+    (is (= 1 (pascal-recursive 15 1)))
+    (is (= 2002 (pascal-recursive 15 10)))
+    (is (= 1 (pascal-recursive 15 15)))
+    (is (= "incorrect column number, element does not exist" (pascal-recursive 5 6)))
+    )
+)
+
+(deftest to-the-power-of-test
+  (testing "Test for to-the-power-of function."
+    (is (= 1 (to-the-power-of 2 0)))
+    (is (= 2 (to-the-power-of 2 1)))
+    (is (= 32 (to-the-power-of 2 5)))
+    )
+)
+
+(deftest fib1-test
+  (testing "Test for fib1 function."
+    (is (= "0.447" (format "%.3f"(fib1 0))))
+    (is (= "0.724" (format "%.3f"(fib1 1))))
+    (is (= "4.960" (format "%.3f"(fib1 5))))
+    (is (= "6765.036" (format "%.3f"(fib1 20))))
+    )
+)
+
+(deftest fib2-test
+  (testing "Test for fib2 function."
+    (is (= "0.000" (format "%.3f"(fib2 0))))
+    (is (= "1.000" (format "%.3f"(fib2 1))))
+    (is (= "5.000" (format "%.3f"(fib2 5))))
+    (is (= "6765.036" (format "%.3f"(fib2 20))))
+    )
+)
+
+
+
+
+
+
+
+
+
 
